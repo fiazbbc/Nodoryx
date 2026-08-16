@@ -12,7 +12,7 @@ Nodoryx is a deterministic energy-operations digital twin that detects abnormal 
 
 Most energy dashboards stop at reporting current consumption. That leaves the operator to work out which device caused a change, whether the situation is getting worse, and what can safely be done about it. Those questions become especially important when flexible loads such as EV chargers create a peak or when a hospital loses grid supply.
 
-We wanted to build a demo where detection, forecasting, and response all use the same electrical state. That makes it possible to show not only a warning, but also why it appeared and what changed after an operator acted.
+I wanted to build a demo where detection, forecasting, and response all use the same electrical state. That makes it possible to show not only a warning, but also why it appeared and what changed after an operator acted.
 
 ## What it does
 
@@ -32,7 +32,7 @@ Operators can trigger six reproducible scenarios: an EV charging surge, HVAC fai
 
 The primary judging story is a deterministic ten-step EV Charging Surge demo. A second Hospital Outage story shows emergency mode, battery/backup response, protected clinical systems, noncritical shedding candidates, and estimated backup duration.
 
-## How we built it
+## How I built it
 
 The core is a pure TypeScript simulation engine shared by every product view. Environment-specific device catalogs and usage schedules generate expected demand. A deterministic waveform adds small normal variation, while scenarios alter the relevant device or supply condition.
 
@@ -46,7 +46,7 @@ The recommendation engine considers current utilization, device flexibility, cri
 
 The interface is built with React 19 and TypeScript on Vinext/Vite. A static production export is deployed on Vercel. Automated tests cover calculation consistency, anomalies, forecasts, battery constraints, critical-load protection, scenarios, recommendations, resets, runtime behavior, responsive contracts, and production rendering.
 
-## Challenges we ran into
+## Challenges I ran into
 
 - Keeping the simulation visually alive while making Reset and every scenario reproducible
 - Ensuring all dashboard metrics came from one state instead of drifting copies
@@ -56,20 +56,20 @@ The interface is built with React 19 and TypeScript on Vinext/Vite. A static pro
 - Keeping continuous updates efficient by bounding history and avoiding duplicate timers and unnecessary rerenders
 - Presenting enough technical evidence for judges without covering the dashboard with tutorial UI
 
-## Accomplishments we're proud of
+## Accomplishments I'm proud of
 
 - One central simulation state drives the dashboard, digital twin, incidents, forecasts, recommendations, and guided demo
 - Facility demand, grid import, integrated energy, cost, emissions, and battery state follow explicit conservation and limit checks
 - The EV surge flows from device telemetry through anomaly detection, overload forecasting, recommendation, mitigation, and measured avoided impact
 - Hospital Mode distinguishes critical and noncritical equipment, activates available backup resources, and enforces critical-load protection inside business logic
 - Recommendations produce real state changes and are removed or recalculated after application
-- The release-candidate suite passes 28 unit tests, 8 integration tests, 2 production-render checks, strict TypeScript, lint, and a production build
+- The release-candidate suite passes 28 unit tests, 12 integration tests, 2 production-render checks, strict TypeScript, lint, and a production build
 
-## What we learned
+## What I learned
 
 A convincing digital-twin demo depends more on internal consistency than on visual complexity. Once device demand, supply, storage, forecasts, and actions shared the same model, explanations became clearer and tests became much more meaningful.
 
-We also learned that transparent statistical methods are a good fit for an infrastructure prototype. A judge can see the expected value, observed value, deviation, trend, and capacity limit without being asked to trust a black-box accuracy claim.
+I also learned that transparent statistical methods are a good fit for an infrastructure prototype. A judge can see the expected value, observed value, deviation, trend, and capacity limit without being asked to trust a black-box accuracy claim.
 
 ## What's next
 

@@ -2,13 +2,42 @@
 
 **Predict energy problems before they become outages.**
 
-Nodoryx is a browser-based energy-operations digital twin built for VoltHacks 2026. It simulates a facility at device level, detects abnormal electrical demand, forecasts short-term capacity risk, and recommends actions that respect operational limits and critical services.
+Nodoryx is a building-energy digital twin that detects abnormal device behavior, forecasts capacity risks, and lets operators test corrective actions before problems escalate.
+
+## Live Demo
+
+[Launch Nodoryx](https://nodoryx-energy.vercel.app/)
+
+## What makes it different
+
+**Simulate → Detect → Forecast → Recommend → Apply → Measure**
+
+Every stage uses one shared simulation state. Applying a recommendation changes the affected equipment, recalculates the power balance and forecast, updates the incident timeline, and measures avoided impact. The interface does not substitute hard-coded before-and-after values.
+
+Main capabilities:
+
+- Device-level simulation across school, hospital, home, and factory environments
+- Statistical anomaly detection with visible expected and observed demand
+- Transparent 15-, 30-, and 60-minute capacity forecasts
+- State-derived recommendations with calculated kW reduction
+- Critical-load protection enforced by business logic
+- Deterministic EV surge and hospital outage demonstrations
+
+## Demo Highlights
+
+<!-- Add: normal operations dashboard screenshot. -->
+<!-- Add: EV Charging Surge anomaly screenshot. -->
+<!-- Add: Nodoryx recommendation before mitigation screenshot. -->
+<!-- Add: load reduction after applying the recommendation screenshot. -->
+<!-- Add: hospital emergency and critical-load protection screenshot. -->
+
+The strongest demo path starts with healthy campus operation, triggers an EV charging surge, applies the resulting recommendation, and shows the measured reduction. Hospital Mode provides a second example centered on backup power and critical-load safety.
 
 ## The problem
 
 Energy dashboards are good at showing current consumption, but operators still have to answer harder questions: Which device caused a spike? Is the site moving toward a capacity limit? What can be changed safely? During an outage, which loads must remain powered?
 
-Nodoryx explores how one shared operational model can connect telemetry, detection, forecasting, response, and measured impact instead of presenting them as separate tools.
+Nodoryx connects telemetry, detection, forecasting, response, and measured impact through one operational model instead of presenting them as separate tools.
 
 ## The solution
 

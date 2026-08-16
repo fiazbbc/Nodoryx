@@ -56,7 +56,7 @@ The interface is built with React 19 and TypeScript on Vinext/Vite. A static pro
 - Keeping continuous updates efficient by bounding history and avoiding duplicate timers and unnecessary rerenders
 - Presenting enough technical evidence for judges without covering the dashboard with tutorial UI
 
-## Accomplishments I'm proud of
+## Accomplishments that I'm proud of
 
 - One central simulation state drives the dashboard, digital twin, incidents, forecasts, recommendations, and guided demo
 - Facility demand, grid import, integrated energy, cost, emissions, and battery state follow explicit conservation and limit checks

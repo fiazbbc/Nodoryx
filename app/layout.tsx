@@ -7,10 +7,16 @@ const sans = Geist({ variable: "--font-sans", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nodoryx — Predict energy problems",
+  title: "Nodoryx — Building-energy digital twin",
   description:
-    "A deterministic smart-building digital twin that detects anomalies, forecasts overloads, and applies corrective actions.",
+    "Nodoryx is a building-energy digital twin that detects abnormal power usage, forecasts capacity risk, and tests corrective actions in real time.",
   icons: { icon: "/favicon.svg" },
+  openGraph: {
+    title: "Nodoryx — Building-energy digital twin",
+    description:
+      "Detect abnormal power usage, forecast capacity risk, and test corrective actions in real time.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

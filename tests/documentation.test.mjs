@@ -62,7 +62,7 @@ test("Devpost draft contains the requested submission sections", () => {
     "What it does",
     "How I built it",
     "Challenges I ran into",
-    "Accomplishments I'm proud of",
+    "Accomplishments that I'm proud of",
     "What I learned",
     "What's next",
     "Technologies and tags",
